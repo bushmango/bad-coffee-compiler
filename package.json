@@ -1,0 +1,17 @@
+{
+  "name": "tms2-compiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-dev index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob-watcher": "^5.0.3",
+    "node-dev": "^3.1.3"
+  }
+}
