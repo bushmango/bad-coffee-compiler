@@ -8,6 +8,7 @@ var p = path.join(__dirname, '../clearviewtms/client/**/*.coffee')
 var p2 = path.join(__dirname, '../clearviewtms/both/**/*.coffee')
 console.log(p)
 console.log('wtf')
+console.log('todo: make sure jordan gets factorio')
 
 // Raw chokidar instance
 var watcher = watch([p, p2], { ignoreInitial: true })
@@ -18,16 +19,15 @@ watcher.on('change', function (path, stat) {
   // `path` is the path of the changed file
   // `stat` is an `fs.Stat` object (not always available)
 
-  console.log('changed', path)
+  console.log('compiling', path)
   let cmd = 'coffee -c ' + path
-  console.log(cmd)
+  // console.log(cmd)
   exec(cmd, (err, stdout, stderr) => {
     if (err) {
       console.log('exec failed')
       return
     }
-    console.log(`stdout: ${stdout}`)
-    console.log(`stderr: ${stderr}`)
+    console.log(`${stdout} ${stderr}`)
   })
 })
 
